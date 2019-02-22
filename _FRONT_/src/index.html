@@ -2,13 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>FronEnd</title>
+  <title>DemoProject</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    
+      function loadDoc(id) {
+        Url = "http://10.109.255.31/leds.cgi?led=" + id;
+      var xhttp = new XMLHttpRequest();
+      xhttp.open("GET", Url, true);
+      xhttp.send();
+    }
+
+    function loadDocAll() {
+      Url = "http://10.109.255.31/leds.cgi?led=0";
+      Url1 = "http://10.109.255.31/leds.cgi?led=1";
+      Url2 = "http://10.109.255.31/leds.cgi?led=2";
+      Url3 = "http://10.109.255.31/leds.cgi?led=3";
+      var xhttp = new XMLHttpRequest();
+      var xhttp1 = new XMLHttpRequest();
+      var xhttp2 = new XMLHttpRequest();
+      var xhttp3 = new XMLHttpRequest();
+      xhttp.open("GET", Url, true);
+      xhttp1.open("GET", Url1, true);
+      xhttp2.open("GET", Url2, true);
+      xhttp3.open("GET", Url3, true);
+      xhttp.send();
+      xhttp1.send();
+      xhttp2.send();
+      xhttp3.send();
+    }
+
+    $(document).ready(function() {
+
+      $('button').click(function() {
+        $(this).toggleClass('toggled');
+      })
+
+      $('#btnAll').click( function() {
+        $(this).toggleClass('toggled');
+        $('button').toggleClass('toggled');
+      })
+    })
+    </script>
 </body>
 </html>

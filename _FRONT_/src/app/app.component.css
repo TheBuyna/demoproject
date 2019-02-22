@@ -1,0 +1,65 @@
+
+#title {
+    border: 1px solid white;
+    background: #42A5F5;
+    height: 2em;
+    padding-left: 1em;
+    padding-top: .5em;
+    font-size: 2em;
+  }
+.panel {
+    justify-content: center;
+}
+
+#navigatie {
+    background: #eee;
+    color: #000;
+  }
+
+#navigatie a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+#navigatie a:hover {
+    background-color: #ccc;
+}
+
+#navigatie a.active {
+    background: #4CAF50;
+}
+
+#main {
+    background: #333;
+}
+
+#main div{
+    width: 100%;
+}
+
+
+#main button {
+    height: 6em;
+    margin: 2em;
+    background: #d32f2f;
+    color: #FFF;
+    border: none;
+    border-radius: .3em;
+    font-size: 1em;
+}
+
+#main button.toggled {
+    background: #388E3C;
+}
+
+/* #main button:active{
+    background: #388E3C;
+} */
+
+#extra {
+    color: #FFF;
+}
+

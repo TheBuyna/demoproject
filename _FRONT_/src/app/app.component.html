@@ -1,20 +1,44 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="container">
+    <h5 id="title">201/208: ARU web interface</h5>
+    <div class="panel">
+      <div class="row">
+          <div class="col-md-4" id="navigatie">
+            <a href="#">Login</a>
+            <a href="#" class="active">Dashboard</a>
+            <a href="#">Scheduler</a>
+            <a href="#">Settings</a>
+          </div>
+        
+          <div id="main" class="col-md-8">
+            <div class="row">
+                <button class="col-4" id="btnNog" onclick="loadDoc(0)">nog</button>
+                <button class="col-4" id="btnRelay2" onclick="loadDoc(1)">Relay2</button>
+                <button class="col-4" id="btnAmaiNi" onclick="loadDoc(2)">amai ni</button>
+                <button class="col-4" id="btnStijn" onclick="loadDoc(3)">Stijn</button>
+                <button class="col-9" id="btnAll"  onclick="loadDocAll()">ALL</button>
+              </div>
+          </div>
+      </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="extra">
+  <!-- <button (click)="showLine()" >SEE</button>
+    <table>
+      <tr *ngFor="let name of lijst">
+        <td>
+          {{ name }}
+        </td>
+      </tr>
+    </table>
+    <div [hidden]="showIt">NOW YOU SEE ME</div> -->
 
+
+  <!-- to be shown when inside -->
+  <div>
+      <input placeholder="type the magic word" [(ngModel)]="inputText" />
+  </div>
+  <!-- to be shown when inside -->
+  <div *ngIf="inputText.includes('Hier is de feestje!')">
+      Hier is de feestje!
+  </div>
+</div>
